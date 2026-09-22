@@ -1,0 +1,56 @@
+{
+  "services": {
+    "41a31342-6417-4a4c-9a9e-4b30797feba9": {
+      "icon": "https://gitlab.com/crafty-controller/crafty-4/-/raw/v4.11.0/app/frontend/static/assets/images/crafty-logo-square.svg",
+      "name": "Minecraft",
+      "build": {
+        "dockerfilePath": "Dockerfile"
+      },
+      "deploy": {
+        "startCommand": null,
+        "healthcheckPath": "/login",
+        "restartPolicyType": "ON_FAILURE",
+        "restartPolicyMaxRetries": 10
+      },
+      "source": {
+        "repo": "https://github.com/nomideusz/minecraft-crafty-railway",
+        "rootDirectory": "/"
+      },
+      "variables": {
+        "EULA": {
+          "defaultValue": "",
+          "isOptional": false,
+          "description": "Type TRUE to accept the Minecraft EULA (https://aka.ms/MinecraftEULA) - the server is created once you do"
+        },
+        "CRAFTY_ADMIN_PASSWORD": {
+          "defaultValue": "${{secret(20)}}",
+          "isOptional": false,
+          "description": "Password for the panel's 'admin' login, set on first boot only - change it in Crafty afterwards"
+        },
+        "PORT": {
+          "defaultValue": "8080",
+          "isOptional": false,
+          "description": "Port the panel listens on behind the Railway domain - leave as is"
+        },
+        "RAILWAY_DEPLOYMENT_DRAINING_SECONDS": {
+          "defaultValue": "90",
+          "isOptional": false,
+          "description": "Time to save the world and stop the server cleanly on redeploy"
+        }
+      },
+      "networking": {
+        "serviceDomains": {
+          "<hasDomain>": {}
+        },
+        "tcpProxies": {
+          "25565": {}
+        }
+      },
+      "volumeMounts": {
+        "41a31342-6417-4a4c-9a9e-4b30797feba9": {
+          "mountPath": "/data"
+        }
+      }
+    }
+  }
+}

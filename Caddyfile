@@ -1,0 +1,24 @@
+{
+	admin off
+	# Hides the boot notices ("admin endpoint disabled", "HTTP/2 requires TLS")
+	# that Railway shows as warnings; proxy errors still get logged.
+	log {
+		level ERROR
+	}
+	servers {
+		# TLS ends at Railway's edge; trust its X-Forwarded-For to find the client.
+		trusted_proxies static 0.0.0.0/0 ::/0
+	}
+}
+
+:{$PORT} {
+	reverse_proxy https://127.0.0.1:8443 {
+		# Crafty's own self-signed certificate, on a hop that never leaves the container.
+		transport http {
+			tls_insecure_skip_verify
+		}
+		# Crafty locks an IP out after 3 wrong passwords: give it the real one,
+		# not 127.0.0.1 shared by everyone.
+		header_up X-Real-IP {client_ip}
+	}
+}

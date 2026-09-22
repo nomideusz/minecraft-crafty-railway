@@ -1,0 +1,8 @@
+{
+  "name": "Minecraft Server | Paper + Crafty Web Panel",
+  "short_name": "Minecraft Java",
+  "description": "Paper server with Crafty web panel: join in minutes, nightly backups",
+  "category": "Other",
+  "image": "https://gitlab.com/crafty-controller/crafty-4/-/raw/v4.11.0/app/frontend/static/assets/images/crafty-logo-square.svg",
+  "card_desc": "A Paper server players can join minutes after deploy, run from Crafty's web panel, with nightly backups."
+}
