@@ -5,5 +5,6 @@
   "category": "Other",
   "image": "https://gitlab.com/crafty-controller/crafty-4/-/raw/v4.11.0/app/frontend/static/assets/images/crafty-logo-square.svg",
   "card_desc": "A Paper server players can join minutes after deploy, run from Crafty's web panel, with nightly backups.",
-  "id": "136c7638-6974-4754-b6be-4095d3e81878"
+  "id": "136c7638-6974-4754-b6be-4095d3e81878",
+  "published": true
 }
