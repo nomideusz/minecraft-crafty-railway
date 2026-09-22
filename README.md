@@ -41,7 +41,7 @@ It's one service, a Railway volume, and a TCP proxy for players.
 
 **Memory.** The server gets your plan's memory minus 1 GB, capped at 4 GB. Railway bills the memory actually used, which is about 2 GB for a fresh world and grows with players and view distance. To change the cap, edit `-Xmx` in the server's Config → Server Execution Command.
 
-**Backups.** Backups are in the server's Backups tab: take one now, download, or restore. They live on the same volume as the world, so download one now and then for a copy off Railway.
+**Backups.** Backups are in the server's Backups tab: take one now, download, or restore. They live on the same volume as the world, so download one now and then for a copy off Railway. The volume starts at 5 GB; make it bigger in its settings if it fills up.
 
 **Updates and plugins.** Update Server on the server's Config page downloads Paper again. For plugins, upload the `.jar` into the `plugins` folder in the Files tab, then restart.
 
