@@ -25,5 +25,8 @@
 		# Crafty locks an IP out after 3 wrong passwords: give it the real one,
 		# not 127.0.0.1 shared by everyone.
 		header_up X-Real-IP {client_ip}
+		# For an https upstream Caddy sends Host: 127.0.0.1:8443, and Crafty's
+		# websockets (live console, stats) refuse any Origin that doesn't match Host.
+		header_up Host {hostport}
 	}
 }
