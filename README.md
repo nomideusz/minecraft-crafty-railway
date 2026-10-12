@@ -1,6 +1,6 @@
 # Deploy and Host Minecraft Java on Railway
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/minecraft-java?utm_medium=integration&utm_source=button&utm_campaign=minecraft-java)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/minecraft-java?referralCode=sLjDXb&utm_medium=integration&utm_source=button&utm_campaign=minecraft-java)
 
 A Minecraft Java Edition server your friends can join a few minutes after you click deploy, run from a web panel instead of a terminal. The server is [Paper](https://papermc.io/), the fast, plugin-ready fork of the vanilla server. The panel is [Crafty Controller](https://craftycontrol.com/), where you get the live console, a file manager, players, backups and schedules in your browser.
 
