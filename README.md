@@ -27,7 +27,7 @@ It's one service, a Railway volume, and a TCP proxy for players.
 
 - [Crafty Controller documentation](https://docs.craftycontrol.com/)
 - [Paper documentation](https://docs.papermc.io/paper/)
-- [Template source on GitHub](https://github.com/nomideusz/minecraft-crafty-railway)
+- [Template source on GitHub](https://github.com/two-workspaces/minecraft-crafty)
 
 ### Implementation Details
 
